@@ -1,0 +1,184 @@
+/*
+ * Snippets
+ * ---------------------------------------------------
+ */
+
+.button-group 
+    float: left
+
+    button 
+        padding: 10px 15px
+        background: #eee
+        box-shadow: 0px 3px 0px 0px #989898
+        font-family: $font
+        font-weight: 600
+        text-transform: uppercase
+        color: #666
+        float: left
+        border-right: 1px solid #CCC
+
+        &:hover  
+            background: #ddd
+
+        img 
+            margin-right: 10px
+            max-height: 15px
+
+        &.active 
+            background: $active-color
+            box-shadow: 0px 3px 0px 0px #7b0000
+            color: #FFF
+            border-color: $active-color
+
+        &:first-child 
+            border-radius: 5px 0 0 5px
+
+        &:last-child 
+            border-radius: 0 5px 5px 0
+            border: 0
+
+.checkbox 
+    width: 20px
+    position: relative
+    margin: 10px 5px 0 0
+    float: left
+
+    label 
+        width: 15px
+        height: 15px
+        cursor: pointer
+        position: absolute
+        top: 0
+        left: 0
+        border: 1px solid $sec-color
+
+        &:after 
+            content: ''
+            width: 6px
+            height: 4px
+            position: absolute
+            top: 3px
+            left: 3px
+            border: 3px solid #333
+            border-top: none
+            border-right: none
+            background: transparent
+            opacity: 0
+            transform: rotate(-45deg)
+
+    input[type=checkbox] 
+        visibility: hidden
+
+        &:checked + label:after 
+            opacity: 1
+
+form.form
+    
+    .linha
+        margin-top: 20px
+
+        &:first-child
+            margin:0
+
+        .item 
+            float: left
+            margin-left: 20px
+
+            label 
+                color: $sec-color
+                font-weight: 600
+                font-family: $font
+                font-size: 14px
+                display: block
+                text-transform: uppercase
+                margin-bottom: 3px
+                display: block
+
+                & + input, & + select
+                    margin: 0 !important
+
+                & + select + .chosen-container-single
+                    margin: 0 !important
+
+            & > input, & > select, & > .chosen-container-single
+                float: left
+                margin-left: 10px
+                
+                &.size1
+                    width: 60px
+
+                &.size2
+                    width: 80px
+
+                &.size3
+                    width: 100px
+
+                &.size4
+                    width: 140px
+
+                &.size5
+                    width: 180px
+
+                &.size6
+                    width: 200px
+
+                &.size7
+                    width: 240px
+
+                &.size8
+                    width: 280px
+
+                &.size9
+                    width: 300px
+
+                &.size10
+                    width: 330px
+
+            .chosen-container-single 
+
+                .chosen-single
+                    height: auto
+                    background: #FFF
+                    padding: 4px 0 4px 10px
+
+                    div b 
+                        margin-top: 5px
+
+            input[type=text], input[type=password] 
+                border: 1px solid #aaa
+                background: #FFF
+                padding: 0 0 0 10px
+                box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0,0,0,.1)
+                border-radius: 5px
+                line-height: 32px
+                font-size: 12px
+                font-family: Arial
+
+            &:first-child
+                margin: 0;
+
+.well 
+    min-height: 20px
+    padding: 15px
+    background-color: #f5f5f5
+    border: 1px solid #e3e3e3
+    border-radius: 4px
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
+
+    &.big
+        padding: 25px 30px
+
+.button-outline 
+    border: 2px solid #8f0000
+    border-radius: 5px
+    font-size: 14px
+    font-weight: 600
+    font-family: $font
+    color: #8f0000
+    text-transform: uppercase
+    padding: 6px 35px
+
+    &:hover
+        background: #8f0000
+        color: #FFF

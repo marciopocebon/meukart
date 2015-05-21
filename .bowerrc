@@ -1,0 +1,11 @@
+{
+    "directory": "public/js/",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "package.json",
+        "src"
+    ]
+}

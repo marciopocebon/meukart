@@ -1,0 +1,362 @@
+@import "base"
+@import "reset"
+@import "snippets"
+@import "tools"
+
+/*
+ * Structure
+ * ---------------------------------------------------
+ */
+
+.wrapper
+    min-width: 1140px
+
+    /*
+     * Header
+     * ---------------------------------------------------
+     */
+    
+    .header-container
+        background: $sec-color
+        height: 81px
+
+        .header
+            width: 1140px
+            margin: 0 auto
+
+            .logo
+                margin: 8px 0 0 0
+                float: left
+                text-decoration: none !important
+
+                strong
+                    position: absolute
+                    top: -999em
+                    left: -999em
+                    width: 0
+                    height: 0
+                    font-size: 0
+                    line-height: 0
+                    text-indent: -999em
+                    overflow: hidden
+
+            nav
+                float: left
+                margin-left: 80px
+
+                a
+                    float: left
+                    border-top: 4px solid $sec-color
+                    height: 72px
+                    line-height: 72px
+                    margin: 0 10px 5px
+                    padding: 0 10px
+                    font-family: $font
+                    color: #FFF
+                    font-weight: 500
+                    text-transform: uppercase
+                    font-size: 14px
+
+                    &:hover, &.active
+                        border-top: 4px solid $active-color
+
+            a.access
+                box-shadow: 0px 3px 0px 0px #7b0000
+                border-radius: 5px
+                float: right
+                font-family: $font
+                color: #FFF
+                font-weight: 500
+                text-transform: uppercase
+                font-size: 14px
+                padding: 8px 30px 8px 50px
+                background: $active-color url(../img/icons/user.png) no-repeat 20px center
+                margin-top: 20px
+
+                &:hover
+                    background-color: $active-color-hover
+
+    /*
+     * Content
+     * ---------------------------------------------------
+     */  
+    
+    .content-wrapper
+        width: 1140px
+        margin: 0 auto
+        padding: 40px 0
+
+        .main-title
+            min-height: 50px
+
+            h2
+                font-family: $font
+                font-size: 36px
+                float: left
+                font-weight: 400
+
+            .button-group
+                margin: 8px 0 0 30px
+
+            .check
+                float: left
+                margin: 10px 0 0 30px
+
+                > label
+                    float: left
+                    color: $sec-color
+                    margin: 10px 20px 0 0
+                    font-weight: 500
+                    font-family: $font
+                    text-transform: uppercase
+                    cursor: pointer
+
+        .main 
+            margin-top: 30px
+
+        /*
+         * Home
+         * ---------------------------------------------------
+         */ 
+        
+        .main
+
+            button.buscar
+                box-shadow: 0px 3px 0px 0px #7b0000
+                border-radius: 5px
+                float: right
+                font-family: $font
+                color: #FFF
+                font-weight: 500
+                text-transform: uppercase
+                font-size: 18px
+                padding: 10px 40px 10px 60px
+                background: $active-color url(../img/icons/busca.png) no-repeat 25px center
+                margin-top: 15px
+
+                &:hover
+                    background-color: $active-color-hover
+
+        /*
+         * Anunciar
+         * ---------------------------------------------------
+         */ 
+            
+        .main-title
+
+            .info-ajuda 
+                float: right
+                margin-top: 5px
+
+                p 
+                    float: left
+                    color: #666
+                    line-height: 16px
+                    margin: 4px 0 0 0
+
+                & > a 
+                    float: left
+                    margin: 0 0 0 20px
+
+        .passos 
+            float: left
+            width: 1140px
+            height: 45px
+            margin: 15px 0
+
+            .passo
+                float: left
+                width: 285px
+
+
+                .numero
+                    width: 45px
+                    height: 45px
+                    float: left
+                    border-radius: 50px
+                    color: #666
+                    font-family: $font
+                    text-align: center
+                    line-height: 45px
+                    background: #eee
+
+                .info
+                    float: left
+                    margin-left: 10px
+                    margin-top: 5px
+
+                    h3
+                        font-size: 14px
+                        font-family: $font
+                        font-weight: 500
+                        
+                        text-transform: uppercase
+                        margin: 0
+                        color: #666
+
+                    p
+                        color: #666
+                        margin: 0
+
+                &.active .numero
+                    background: #8f0000  
+                    color: #FFF
+
+                &.active .info h3
+                    color: #8f0000  
+
+        .planos
+            margin-top: 20px
+
+            .plano
+                margin-top: 20px
+                height: 130px
+
+                &:first-child
+                    margin: 0
+
+                img
+                    float: left
+                    height: 130px
+
+                .block
+                    float: left
+                    width: 130px
+                    height: 130px
+                    padding: 0 13px
+                    text-align: center
+                    border-left: 1px solid #CCC
+                    color: #666
+
+                    h4 
+                        margin: 15px 0 0 0
+                        font-size: 30px
+                        font-family: $font
+                        font-weight: 600
+                        color: #000
+
+                    & > p
+                        text-transform: uppercase
+                        margin: 0
+
+                    p.preco
+                        margin: 25px 0 0 0
+                        line-height: 25px
+
+                        &.mini
+                            margin: 20px 0 0 0
+
+                        span
+                            color: #000
+                            font-family: $font
+                            font-size: 30px
+                            font-weight: 600
+
+                        strong
+                            color: #000
+
+                    &.title
+                        width: 260px
+                        text-align: left
+                        border: 0
+
+                        h3
+                            color: #000
+                            font-family: $font
+                            font-size: 30px
+                            font-weight: 600
+                            margin: 35px 0 0 0
+                            text-transform: uppercase
+
+                        p
+                            text-transform: none
+                            margin: 0
+
+                    &.botao 
+                        width: 175px
+                        padding-right: 0
+
+                        a
+                            box-shadow: 0px 3px 0px 0px #0a6b00
+                            border-radius: 5px
+                            float: right
+                            font-family: $font
+                            color: #FFF
+                            font-weight: 500
+                            text-transform: uppercase
+                            font-size: 15px
+                            padding: 15px 45px 13px 45px
+                            background: #0f9e00
+                            margin-top: 40px
+
+                            &:hover
+                                background-color: #0d8800
+
+        .info-anuncio 
+            color: #999
+            line-height: 30px
+            margin: 30px 0 0 0
+
+        /*
+         * Anunciar - Identificação
+         * ---------------------------------------------------
+         */ 
+        
+        
+
+
+    /*
+     * Footer
+     * ---------------------------------------------------
+     */
+    
+    .footer-container
+
+        .footer
+            width: 1140px
+            margin: 0 auto
+            padding: 20px 0
+
+        .widgets
+            background: $main-color
+            height: 270px
+
+            ul.links
+                width: 182px
+                border-left: 8px solid #A80000
+                padding: 0 15px 
+                float: left
+                height: 180px
+
+                li
+                    margin: 0 0 10px
+                    color: #FFF
+
+                    &.title
+                        font-family: $font
+                        font-size: 18px
+                        font-weight: 500   
+                        text-transform: uppercase
+
+                    a
+                        color: #FFF
+                        font-size: 12px
+
+                        &:hover
+                            text-decoration: underline
+            
+            .social
+                padding: 10px
+                background: #FFF url(../img/ajax-loader.gif) no-repeat center
+                width: 420px
+                height: 210px
+                float: right
+                border: 1px solid $active-color-hover
+
+        .advice
+            background: $sec-color
+            font-size: 11px
+            font-family: Arial
+            line-height: 16px
+            color: #888
+            text-align: center   
