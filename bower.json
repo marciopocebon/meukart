@@ -1,0 +1,23 @@
+{
+  "name": "meukart",
+  "version": "0.0.0",
+  "authors": [
+    "Diego Schell Fernandes <diego.schell.f@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.meukart.com.br/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/js/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chosen": "~1.4.2",
+    "jquery": "~2.1.4",
+    "jquery-validation": "~1.13.1",
+    "sweetalert": "~1.0.1"
+  }
+}

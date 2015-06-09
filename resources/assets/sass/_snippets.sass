@@ -21,6 +21,7 @@
             background: #ddd
 
         img 
+            float: left
             margin-right: 10px
             max-height: 15px
 
@@ -37,10 +38,28 @@
             border-radius: 0 5px 5px 0
             border: 0
 
+        &.double
+            padding: 3px 15px
+
+            img
+                margin-top: 7px
+
+            span
+                float: right
+                padding: 0 8px
+                font-size: 13px
+                line-height: 17px
+
+                small
+                    line-height: 12px
+                    font-size: 10px
+                    display: block
+                    font-weight: 500
+
 .checkbox 
     width: 20px
     position: relative
-    margin: 10px 5px 0 0
+    margin: 0 5px 0 0
     float: left
 
     label 
@@ -50,16 +69,17 @@
         position: absolute
         top: 0
         left: 0
-        border: 1px solid $sec-color
+        border: 1px solid #CCC
+        border-radius: 5px
 
         &:after 
             content: ''
-            width: 6px
+            width: 7px
             height: 4px
             position: absolute
             top: 3px
             left: 3px
-            border: 3px solid #333
+            border: 2px solid #666
             border-top: none
             border-right: none
             background: transparent
@@ -73,89 +93,89 @@
             opacity: 1
 
 form.form
-    
-    .linha
-        margin-top: 20px
 
-        &:first-child
-            margin:0
+    .item 
+        float: left
 
-        .item 
+        &.vert 
+            margin-top: 15px
+
+        &.horz
+            margin-left: 30px
+
+        label 
+            color: #333
+            font-weight: bold
+            font-size: 13px
+            display: block
+            margin-bottom: 3px
+            display: block
+
+            & + input, & + select
+                margin: 0 !important
+
+            & + select + .chosen-container-single
+                margin: 0 !important
+
+        & > input, & > select, & > .chosen-container-single
             float: left
-            margin-left: 20px
+            margin-left: 10px
+            
+            &.size1
+                width: 60px
 
-            label 
-                color: $sec-color
-                font-weight: 600
-                font-family: $font
-                font-size: 14px
-                display: block
-                text-transform: uppercase
-                margin-bottom: 3px
-                display: block
+            &.size2
+                width: 80px
 
-                & + input, & + select
-                    margin: 0 !important
+            &.size3
+                width: 100px
 
-                & + select + .chosen-container-single
-                    margin: 0 !important
+            &.size4
+                width: 140px
 
-            & > input, & > select, & > .chosen-container-single
-                float: left
-                margin-left: 10px
-                
-                &.size1
-                    width: 60px
+            &.size5
+                width: 180px
 
-                &.size2
-                    width: 80px
+            &.size6
+                width: 200px
 
-                &.size3
-                    width: 100px
+            &.size7
+                width: 230px
 
-                &.size4
-                    width: 140px
+            &.size8
+                width: 255px
 
-                &.size5
-                    width: 180px
+            &.size9
+                width: 300px
 
-                &.size6
-                    width: 200px
+            &.size10
+                width: 320px
 
-                &.size7
-                    width: 240px
-
-                &.size8
-                    width: 280px
-
-                &.size9
-                    width: 300px
-
-                &.size10
+                &.chosen-container-single
                     width: 330px
 
-            .chosen-container-single 
+        .chosen-container-single 
 
-                .chosen-single
-                    height: auto
-                    background: #FFF
-                    padding: 4px 0 4px 10px
-
-                    div b 
-                        margin-top: 5px
-
-            input[type=text], input[type=password] 
-                border: 1px solid #aaa
+            .chosen-single
+                height: auto
                 background: #FFF
-                padding: 0 0 0 10px
-                box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0,0,0,.1)
-                border-radius: 5px
-                line-height: 32px
-                font-size: 12px
-                font-family: Arial
+                padding: 4px 10px 4px 10px
 
-            &:first-child
-                margin: 0;
+                div b 
+                    margin-top: 5px
+
+        input[type=text], input[type=password] 
+            border: 1px solid #aaa
+            background: #FFF
+            padding: 0 10px
+            box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0,0,0,.1)
+            border-radius: 5px
+            line-height: 32px
+            font-size: 12px
+            font-family: Arial
+
+        &:first-child
+            margin: 0;
 
 .well 
     min-height: 20px
@@ -182,3 +202,30 @@ form.form
     &:hover
         background: #8f0000
         color: #FFF
+
+.meu-well 
+    min-height: 20px;
+    padding: 15px
+    background: #FFF
+    border: 2px solid #DDD
+    border-radius: 5px
+    margin: 10px 0 0
+
+    &.big
+        padding: 25px 30px
+
+    &.small
+        padding: 5px 15px
+
+    &:first-child
+        margin: 0
+
+    &.no-padding 
+        padding: 0
+    
+        .content-padding
+            padding: 15px
+
+    &.gray 
+        background: #DDD
+        border: 2px solid #CCC

@@ -7,7 +7,11 @@
 	<title>Meu Kart | @yield('title')</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-	<link href="{{ asset('/js/chosen/chosen.min.css') }}" rel="stylesheet">
+
+	<!-- bower:css -->
+	<link rel="stylesheet" href="{{ asset('/js/chosen/chosen.min.css') }}" />
+	<link rel="stylesheet" href="{{ asset('/js/sweetalert/dist/sweetalert.css') }}" />
+	<!-- endbower -->
 
 	<link rel="shortcut icon" type="image/ico" href="{{ asset('favicon.ico') }}"/>
 
@@ -27,15 +31,15 @@
 			<div class="header">
 				<h1 class="logo">
 					<strong>Meu Kart | @yield('title')</strong>
-					<a href="" title="Meu Kart | @yield('title')" class="logo">
-						<img src="{{ asset('img/logo.png') }}" alt="Meu Kart | @yield('title')" />
+					<a href="{{ url('/') }}" title="Meu Kart | @yield('title')" class="logo">
+						<img src="{{ asset('img/kart-icon.png') }}" alt="Meu Kart | @yield('title')" />
 					</a>
 				</h1>
 
 				<nav class="menu">
-					<a class="active" href="" title="{{ trans('menu.comprar') }}">{{ trans('menu.comprar') }}</a>
-					<a href="" title="{{ trans('menu.vender') }}">{{ trans('menu.vender') }}</a>
-					<a href="" title="{{ trans('menu.atendimento') }}">{{ trans('menu.atendimento') }}</a>
+					<a class="active" href="{{ url('/') }}" title="{{ trans('menu.comprar') }}">{{ trans('menu.comprar') }}</a>
+					<a href="{{ url('/anuncios/novo') }}" title="{{ trans('menu.vender') }}">{{ trans('menu.vender') }}</a>
+					<a href="{{ url('/') }}" title="{{ trans('menu.atendimento') }}">{{ trans('menu.atendimento') }}</a>
 				</nav>
 
 				<a href="" class="access" title="{{ trans('menu.acessar') }}">{{ trans('menu.acessar') }}</a>
@@ -71,7 +75,7 @@
 						<li><a href="">Anúncios para pessoa jurídica</a></li>
 					</ul>
 					<div class="social">
-						<div class="fb-page" data-href="https://www.facebook.com/webmotors" data-width="420" data-height="210" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+						<div class="fb-page" data-href="https://www.facebook.com/webmotors" data-width="340" data-height="210" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
 							<div class="fb-xfbml-parse-ignore">
 								<blockquote cite="https://www.facebook.com/webmotors">
 									<a href="https://www.facebook.com/webmotors">WebMotors</a>
@@ -94,17 +98,21 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="{{ asset('js/jquery/dist/jquery.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/chosen/chosen.jquery.min.js') }}"></script>
+	<!-- bower:js -->
+	<script src="{{ asset('/js/jquery/dist/jquery.js') }}"></script>
+	<script src="{{ asset('/js/chosen/chosen.jquery.min.js') }}"></script>
+	<script src="{{ asset('/js/jquery-validation/dist/jquery.validate.js') }}"></script>
+	<script src="{{ asset('/js/sweetalert/dist/sweetalert.min.js') }}"></script>
+	<!-- endbower -->
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
 	<!--Start of Zopim Live Chat Script-->
 	<script type="text/javascript">
-		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-		$.src="//v2.zopim.com/?31ratShXbMmFn47qMdWfRvx7YptvYR2N";z.t=+new Date;$.
-		type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+		// window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+		// d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+		// _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+		// $.src="//v2.zopim.com/?31ratShXbMmFn47qMdWfRvx7YptvYR2N";z.t=+new Date;$.
+		// type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 	</script>
 	<!--End of Zopim Live Chat Script-->
 
